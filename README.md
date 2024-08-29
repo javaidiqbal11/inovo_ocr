@@ -18,11 +18,11 @@ pip install -r requirements.txt
 - Run train_yolov8_seg file 
 
 ```shell
-python train_yolov8_seg.py
+python src/train_yolov8_seg.py
 ``` 
 
 - Test the segmentaion 
 
 ```shell
-python test_model.py
+python src/test_model.py
 ```
