@@ -1,65 +1,94 @@
-# Segmentation using YOLO
+# Receipt Text Extractor
 
-## Setup 
+This is a Gradio-powered web application that extracts structured data from receipt images using an API (such as OpenAI's GPT-4). The extracted information is returned in a structured JSON format that follows the provided class definitions for `Tax`, `LineItem`, `Supplier`, and `Receipt`.
 
-- Install Python 3.10.0
-- Create the data folder and place the train, test and valid data (Each folder have images and labels folder)
-- Create the virtual environment 
+## Features
 
-```shell
-python -m venv app
+- Upload a receipt image (PNG format).
+- The application sends the image to the API for processing.
+- The API extracts receipt details, such as total price, supplier, and line items, and structures them into a JSON format.
+- The structured JSON is displayed as the output.
+
+## Requirements
+
+- Python 3.7 or higher
+- `gradio`
+- `requests`
+- An API key for the GPT model (e.g., OpenAI's API)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/username/repository-name.git
 ```
-- Install the requirements.txt 
+
+2. Navigate to the project directory:
+
+```bash
+cd repository-name
+```
+
+3. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-- Run train_yolov8_seg file 
+## Usage
 
-```shell
-python src/train_yolov8_seg.py
-``` 
+1. Replace the placeholder API key in the `extract_text_from_image` function with your actual API key.
 
-- Test the segmentaion 
+2. Run the application:
 
-```shell
-python src/test_model.py
-```
-
-
-### Dataset Directory Structure 
 ```bash
-dataset/
-│
-├── train/
-│   ├── images/
-│   │   ├── image1.jpg
-│   │   ├── image2.jpg
-│   │   └── ...
-│   └── labels/
-│       ├── image1.txt
-│       ├── image2.txt
-│       └── ...
-│
-├── val/
-│   ├── images/
-│   │   ├── image1.jpg
-│   │   ├── image2.jpg
-│   │   └── ...
-│   └── labels/
-│       ├── image1.txt
-│       ├── image2.txt
-│       └── ...
-│
-└── test/
-    ├── images/
-    │   ├── image1.jpg
-    │   ├── image2.jpg
-    │   └── ...
-    └── labels/
-        ├── image1.txt
-        ├── image2.txt
-        └── ...
+python app.py
+```
+
+3. Access the Gradio interface via the provided link in the terminal.
+
+4. Upload a receipt image and receive structured data in JSON format.
+
+## Example Class Definitions
+
+The structured JSON follows the format of the following Python class definitions:
+
+```python
+class Tax(BaseModel):
+    rate: float
+    value: float
+    currency: str
+
+class LineItem(BaseModel): 
+    description: str
+    quantity: int
+    unit_price: float
+    total_price: float
+    currency: str
+
+class Supplier(BaseModel):
+    name: str
+    address: str
+    phone_number: str
+
+class Receipt(BaseModel):
+    name: str
+    type: str
+    locale: str
+    total_incl: dict
+    total_excl: dict
+    tax: list[Tax]
+    supplier: Supplier
+    date: str
+    time: str
+    line_items: list[LineItem]
+```
+
+## License
+
+This project is licensed under the MIT License.
 
 ```
+
+This `README.md` should give users a clear overview of your project and instructions for setting it up and running it.
