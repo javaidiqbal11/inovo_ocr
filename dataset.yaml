@@ -1,8 +1,0 @@
-# dataset.yaml
-train: data/train/images  # Path to training images
-val: data/val/images      # Path to validation images
-test: data/test/images    # Path to test images
-
-# Number of classes and their names
-nc: 1  # Number of classes (e.g., for receipts, this might be 1)
-names: ['receipt']  # Class names

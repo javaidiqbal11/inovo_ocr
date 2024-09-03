@@ -85,9 +85,6 @@ class Receipt(BaseModel):
     line_items: list[LineItem]
 ```
 
-## License
-
-This project is licensed under the MIT License.
 
 ```
 
