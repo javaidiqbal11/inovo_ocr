@@ -3,7 +3,7 @@
 This is a Gradio-powered web application that extracts structured data from receipt images or pdf using an API (such as OpenAI's GPT-4). The extracted information is returned in a structured JSON format that follows the provided class definitions for `Tax`, `LineItem`, `Supplier`, and `Receipt`.
 
 ## Features
-
+- Upload a pdf soft copy or. 
 - Upload a receipt image (PNG format).
 - The application sends the image to the API for processing.
 - The API extracts receipt details, such as total price, supplier, and line items, and structures them into a JSON format.
