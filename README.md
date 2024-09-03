@@ -14,14 +14,14 @@ This is a Gradio-powered web application that extracts structured data from rece
 - `Python 3.7` or higher
 - `gradio`
 - `requests`
-- An API key for the GPT model (e.g., OpenAI's API)
+- An API key for the `GPT model` (e.g., OpenAI's API)
 
 ## Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/username/repository-name.git
+git clone https://github.com/javaidiqbal11/inovo_ocr.git
 ```
 
 2. Navigate to the project directory:
