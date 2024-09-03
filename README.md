@@ -11,7 +11,7 @@ This is a Gradio-powered web application that extracts structured data from rece
 
 ## Requirements
 
-- Python 3.7 or higher
+- `Python 3.7` or higher
 - `gradio`
 - `requests`
 - An API key for the GPT model (e.g., OpenAI's API)
