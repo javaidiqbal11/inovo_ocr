@@ -1,7 +1,8 @@
 # Segmentation using YOLO
+The code written for the segmentaion using YOLOv8m-seg. After segmentation of the receipts the segmented receipt will be passed to the OCR such that GPT4o. 
+
 
 ## Setup 
-
 - Install Python 3.10.0
 - Create the data folder and place the train, test and valid data (Each folder have images and labels folder)
 - Create the virtual environment 
