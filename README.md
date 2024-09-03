@@ -1,6 +1,6 @@
 # Receipt Text Extractor
 
-This is a Gradio-powered web application that extracts structured data from receipt images using an API (such as OpenAI's GPT-4). The extracted information is returned in a structured JSON format that follows the provided class definitions for `Tax`, `LineItem`, `Supplier`, and `Receipt`.
+This is a Gradio-powered web application that extracts structured data from receipt images or pdf using an API (such as OpenAI's GPT-4). The extracted information is returned in a structured JSON format that follows the provided class definitions for `Tax`, `LineItem`, `Supplier`, and `Receipt`.
 
 ## Features
 
