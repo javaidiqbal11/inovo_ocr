@@ -27,7 +27,7 @@ git clone https://github.com/javaidiqbal11/inovo_ocr.git
 2. Navigate to the project directory:
 
 ```bash
-cd repository-name
+cd demo_app
 ```
 
 3. Install the dependencies:
@@ -83,9 +83,6 @@ class Receipt(BaseModel):
     date: str
     time: str
     line_items: list[LineItem]
-```
 
-
-```
 
 This `README.md` should give users a clear overview of your project and instructions for setting it up and running it.
