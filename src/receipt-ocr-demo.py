@@ -8,7 +8,7 @@ import fitz  # PyMuPDF
 
 # Define the extract_text function
 def extract_text_from_image(image, temperature=0.2):
-    api_key = "sk-svcacct-F4EW5jz1GBNj6XDSNSs5h2ajJKFgT8gBNtrtd8o1d6-jzre5VquRsG2JziXxBTeNUpLEjBvmT3BlbkFJydCp2pKPwErOaS19ftiZgY6GqpB2sJO6WcDvOCzDJzVT14Z7h6-4W3xRGoUHIbdZEzRdpnoA"
+    api_key = "OPENAI_API_KEY"
     def encode_image(image):
         buffered = BytesIO()
         image.save(buffered, format="PNG")  # Save image to buffer as PNG
